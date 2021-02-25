@@ -1,0 +1,70 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/contact_shape_layout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:layout_margin="5dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact_myCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                >
+                <ImageView
+                    android:id="@+id/contact_image_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#F8FBFB"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/contact_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/contact_shape_layout"
+            android:text="Contact Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/contact_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_name_user"
+            android:text="Number"
+            android:layout_margin="5dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/contact_shape_layout"
+            tools:ignore="NotSibling" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

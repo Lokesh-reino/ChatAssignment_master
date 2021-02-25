@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/tool_bar"
+        />
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@id/tool_bar"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view_user"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:src="@drawable/ic_baseline_person_24"
+            app:civ_border_color="@color/purple_200"
+            app:civ_border_width="2dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAddProfilePic"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/color"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_camera_alt_24" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl"
+        android:layout_margin="8dp"
+        android:background="@drawable/edit_text_border"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="8dp"
+        android:hint="@string/hint_user_name"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPersonName"
+        android:layout_margin="8dp"
+        android:background="@drawable/edit_text_border"
+        android:digits="1234567890"
+        android:drawableLeft="@drawable/ic_baseline_mobile_friendly_24"
+        android:drawablePadding="8dp"
+        android:hint="@string/hint_contact_name"
+        android:inputType="number|textNoSuggestions"
+        android:maxLength="10"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <EditText
+        android:id="@+id/editTextDOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_margin="8dp"
+        android:background="@drawable/edit_text_border"
+        android:digits="1234567890"
+        android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+        android:drawablePadding="8dp"
+        android:focusable="false"
+        android:hint="@string/hint_select_birthday"
+        android:inputType="number|textNoSuggestions"
+        android:maxLength="10"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextDOB"
+        android:layout_margin="10dp"
+        android:clickable="false"
+        android:padding="10dp"
+        android:text="@string/save"
+        android:backgroundTint="#03F40D"/>
+</RelativeLayout>
